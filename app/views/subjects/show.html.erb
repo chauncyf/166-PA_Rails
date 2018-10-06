@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @subject.name %>
+</p>
+
+<p>
+  <strong>Abbreviation:</strong>
+  <%= @subject.abbreviation %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @subject.id %>
+</p>
+
+<%= link_to 'Edit', edit_subject_path(@subject) %> |
+<%= link_to 'Back', 'javascript:history.back()' %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subjects
   get 'index/home'
   resources :instructors
   resources :courses
