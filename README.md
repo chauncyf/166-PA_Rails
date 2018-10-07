@@ -9,9 +9,9 @@ https://github.com/chauncyf/course_catalog
  https://chenfeng-pa-rails.herokuapp.com/
 
 
-## Things you may want to cover:
+## Things you may want to cover
 
-* Author - [Chenfeng Fan](fanc@brandeis.edu)
+* Who am I - [Chenfeng Fan](https://github.com/chauncyf),  <fanc@brandeis.edu>
 
 * Ruby version - 2.5.1 
 

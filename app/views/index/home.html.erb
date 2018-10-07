@@ -14,9 +14,9 @@
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
+  <%# Course tab %>
   <div class="tab-pane fade show active" id="course" role="tabpanel" aria-labelledby="course-tab">
-
-    <table>
+    <table class="table">
       <thead>  
         <tr>
           <th>Name</th>
@@ -26,7 +26,7 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody>    
         <% @courses.each do |course| %>
           <tr>
             <td><%= course.name %></td>
@@ -40,11 +40,12 @@
       </tbody>
     </table>
 
+    <a href=<%= new_course_path %> button type="button" class="btn btn-primary btn-block">New Course</a>
   </div>
   
+  <%# Instructor tab %>
   <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
-  
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>First</th>
@@ -71,11 +72,13 @@
         <% end %>
       </tbody>
     </table>
-  
+
+    <a href=<%= new_instructor_path %> button type="button" class="btn btn-primary btn-block">New Instructor</a>
   </div>
+
+  <%# Subject tab %>
   <div class="tab-pane fade" id="subject" role="tabpanel" aria-labelledby="subject-tab">
-  
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>
@@ -96,8 +99,9 @@
             <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
+
       </tbody>
     </table>
-
+    <a href=<%= new_subject_path %> button type="button" class="btn btn-primary btn-block">New Subject</a>
   </div>
 </div>
