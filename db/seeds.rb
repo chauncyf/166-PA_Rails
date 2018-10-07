@@ -20,8 +20,7 @@
 
 subject_data = []
 subject_column = [:name, :abbreviation, :id]
-subject_file = open('db/pa_rails_json/subject.json')
-subject_json = JSON.parse(subject_file.read)
+subject_json = JSON.parse(open('db/pa_rails_json/subject.json').read)
 subject_json.each do |row|
     subject_data << {name: row['name'], abbreviation: row['abbreviation'], id: row['id']}
 end
