@@ -22,33 +22,33 @@ https://github.com/chauncyf/course_catalog
 * Change db from SQLite to Postgres - [Running Rails on Postgres](https://devcenter.heroku.com/articles/sqlite3#running-rails-on-postgres)
 
 * Data Schema
-```ruby
-  create_table "courses", force: :cascade do |t|
-    t.string "name"
-    t.string "code"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  ```ruby
+    create_table "courses", force: :cascade do |t|
+        t.string "name"
+        t.string "code"
+        t.text "description"
+        t.datetime "created_at", null: false
+        t.datetime "updated_at", null: false
+    end
 
-  create_table "instructors", id: false, force: :cascade do |t|
-    t.string "first"
-    t.string "middle"
-    t.string "last"
-    t.string "email"
-    t.integer "id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+    create_table "instructors", id: false, force: :cascade do |t|
+        t.string "first"
+        t.string "middle"
+        t.string "last"
+        t.string "email"
+        t.integer "id"
+        t.datetime "created_at", null: false
+        t.datetime "updated_at", null: false
+    end
 
-  create_table "subjects", id: false, force: :cascade do |t|
-    t.string "name"
-    t.string "abbreviation"
-    t.string "id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-```
+    create_table "subjects", id: false, force: :cascade do |t|
+        t.string "name"
+        t.string "abbreviation"
+        t.string "id"
+        t.datetime "created_at", null: false
+        t.datetime "updated_at", null: false
+    end
+  ```
 
 * Activerecord-import Sample
   ``` ruby
