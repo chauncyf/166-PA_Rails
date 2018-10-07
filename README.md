@@ -1,5 +1,4 @@
 # PA Rails
-
 Hi, this is a course assignment repository for COSI 166b.
 
 ## GitHub
@@ -8,14 +7,48 @@ https://github.com/chauncyf/course_catalog
 ## Heroku
  https://chenfeng-pa-rails.herokuapp.com/
 
-
 ## Things you may want to cover
 
 * Who am I - [Chenfeng Fan](https://github.com/chauncyf),  <fanc@brandeis.edu>
 
+* Assignment Page - [PA Rails 1](http://cosi166b.s3-website-us-west-2.amazonaws.com/content/topics/pa/pa_rails_1.md/), [PA Rails 2](http://cosi166b.s3-website-us-west-2.amazonaws.com/content/topics/pa/pa_rails_2.md/), [PA Rails 3](http://cosi166b.s3-website-us-west-2.amazonaws.com/content/topics/pa/pa_rails_3.md/)
+
 * Ruby version - 2.5.1 
 
 * Rails version - 5.2.1
+
+### PA Rails 1
+
+* Change db from SQLite to Postgres - [Running Rails on Postgres](https://devcenter.heroku.com/articles/sqlite3#running-rails-on-postgres)
+
+* Data Schema
+```ruby
+  create_table "courses", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instructors", id: false, force: :cascade do |t|
+    t.string "first"
+    t.string "middle"
+    t.string "last"
+    t.string "email"
+    t.integer "id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects", id: false, force: :cascade do |t|
+    t.string "name"
+    t.string "abbreviation"
+    t.string "id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+```
 
 * Activerecord-import Sample
   ``` ruby
