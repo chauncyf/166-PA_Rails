@@ -1,0 +1,13 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "course catalog", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Course",   courses_path %></li>
+        <li><%= link_to "Instructor",   instructors_path %></li>
+        <li><%= link_to "Subject", subjects_path %></li>
+        <li><%= link_to "Signup", signup_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

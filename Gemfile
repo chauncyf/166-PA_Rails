@@ -7,6 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
 
+gem 'bcrypt',         '3.1.12'
 gem 'bootstrap-sass', '3.3.7'
 
 gem 'pg', '>= 0.18', '< 2.0'
@@ -69,6 +70,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'hirb'
-gem 'bootstrap'
+# gem 'bootstrap'
 gem 'jquery-rails'
 gem 'activerecord-import'

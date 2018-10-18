@@ -13,24 +13,18 @@
   </head>
 
   <body>
-
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "course catalog", '/', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Course",   'courses' %></li>
-              <li><%= link_to "Instructor",   'instructors' %></li>
-              <li><%= link_to "Subject", 'subjects' %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
 
     <div class="container">
-      <%= yield %>
-    </div>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
 
+      <%= yield %>
+
+      <%= render 'layouts/footer' %>
+      <%#= debug(params) if Rails.env.development? %>
+    </div>
         
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
