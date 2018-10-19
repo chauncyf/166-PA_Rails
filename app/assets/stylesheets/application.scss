@@ -84,7 +84,7 @@ p {
     letter-spacing: -1px;
     padding-top: 0px;
     font-weight: bold;
-    transform: translateX(-200px);
+    transform: translateX(-165px);
     &:hover {
      color: #fff;
      text-decoration: none;
@@ -98,8 +98,24 @@ p {
 
 .nav {
     display: inline;
-    transform: translateX(200px)
+    //position: fixed;
+    //float: top;
+    //size: portrait;
+    //transform: translateX(-100px);
+    //transform: translateY(-25px);
+    transform: translate(170px);
+    height: 50px;
+    overflow: visible;
 }
+
+
+//ul li .dropdown {
+//  display: none;
+//  position: fixed;
+//  width: 80px;
+//  top: 50px; //amend as needed
+//  right: 0; // amend as needed
+//}
 
 
 /* footer */
@@ -138,33 +154,33 @@ footer {
   @include box_sizing;
 }
 
-///* sidebar */
-//
-//aside {
-//  section.user_info {
-//    margin-top: 20px;
-//  }
-//  section {
-//    padding: 10px 0;
-//    margin-top: 20px;
-//    &:first-child {
-//      border: 0;
-//      padding-top: 0;
-//    }
-//    span {
-//      display: block;
-//      margin-bottom: 3px;
-//      line-height: 1;
-//    }
-//    h1 {
-//      font-size: 1.4em;
-//      text-align: left;
-//      letter-spacing: -1px;
-//      margin-bottom: 3px;
-//      margin-top: 0px;
-//    }
-//  }
-//}
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 3em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
 
 .gravatar {
   float: left;

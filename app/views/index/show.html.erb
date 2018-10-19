@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @course.code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<%= link_to 'Enroll', "/enroll/#{@course.id}", class: 'btn btn-primary', method: :post %>
+<%= link_to 'Back', 'javascript:history.back()' %>

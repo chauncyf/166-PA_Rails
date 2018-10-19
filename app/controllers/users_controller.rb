@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  # skip_before_action new
+
   def index
     @user = User.all
   end
@@ -22,6 +24,25 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def enroll
+    if Enrollment.where(user_id: current_user.id, course_id: params[:course_id]).size >= 1
+      flash[:danger] = 'This course is already enrolled'
+    else
+      Enrollment.create(user_id: current_user.id, course_id: params[:course_id])
+      flash[:success] = 'Enroll success!'
+    end
+    redirect_to search_path
+
+  end
+
+  def enrolled_course
+    @user = current_user
+    @courses = current_user.courses.all
+    # puts "!!!!!!#{User.joins(:enrollments).where(enrollments: :user_id == current_user.id)}"
+    # puts "!!!!!!#{current_user.courses.first}"
+
   end
 
   private

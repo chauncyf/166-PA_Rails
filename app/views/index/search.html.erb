@@ -1,0 +1,10 @@
+<% provide(:title, 'Search') %>
+<h1>Search</h1>
+
+<%= form_tag(search_result_path, method: "get") do %>
+  <%= label_tag(:course_code_search, "Course Search:") %>
+  <%= text_field_tag(:course_code) %>
+  <%= submit_tag("Search", class: 'btn btn-primary') %>
+<% end %>
+
+<%= render 'index/index' %>
