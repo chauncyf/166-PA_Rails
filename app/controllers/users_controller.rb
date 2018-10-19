@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # skip_before_action new
+  skip_before_action :require_login, only: [:new, :create]
 
   def index
     @user = User.all
@@ -31,18 +31,21 @@ class UsersController < ApplicationController
       flash[:danger] = 'This course is already enrolled'
     else
       Enrollment.create(user_id: current_user.id, course_id: params[:course_id])
-      flash[:success] = 'Enroll success!'
+      flash[:success] = 'Course enroll success!'
     end
     redirect_to search_path
+  end
 
+  def drop
+    Enrollment.where(user_id: current_user.id, course_id: params[:course_id]).first.destroy
+    flash[:success] = 'Course drop success!'
+
+    redirect_to enrolled_course_path
   end
 
   def enrolled_course
     @user = current_user
     @courses = current_user.courses.all
-    # puts "!!!!!!#{User.joins(:enrollments).where(enrollments: :user_id == current_user.id)}"
-    # puts "!!!!!!#{current_user.courses.first}"
-
   end
 
   private

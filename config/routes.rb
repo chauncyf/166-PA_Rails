@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post '/signup',  to: 'users#create'
   get '/enrolled_course', to: 'users#enrolled_course'
   post '/enroll/:course_id', to: 'users#enroll'
+  post '/drop/:course_id', to: 'users#drop'
 
 
   get    '/login',   to: 'sessions#new'

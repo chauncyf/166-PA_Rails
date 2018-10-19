@@ -2,12 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  # before_action :check_login
-  #
-  # def check_login
-  #   if !logged_in?
-  #     redirect_to 'sessions/new'
-  #   end
-  # end
-
+  before_action :require_login
+    include ApplicationHelper
+    def require_login
+      if !logged_in?
+        redirect_to login_path
+      end
+    end
 end

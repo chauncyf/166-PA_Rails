@@ -2,7 +2,7 @@
 Hi, this is a course assignment repository for COSI 166b.
 
 ## GitHub
-https://github.com/chauncyf/course_catalog
+https://github.com/chauncyf/PA-Rails-2
 
 ## Heroku
  https://chenfeng-pa-rails.herokuapp.com/
@@ -79,3 +79,44 @@ https://github.com/chauncyf/course_catalog
         </li>
     </ul>
   ```
+  
+### PA Rails 2
+* Require Login
+    ``` ruby
+    before_action :require_login
+        include ApplicationHelper
+        def require_login
+          if !logged_in?
+            redirect_to login_path
+          end
+        end
+    ```
+
+* Course Search
+    ``` ruby
+    def result
+        @enrollments = Enrollment.all
+        @search = params[:course_name]
+        # @course = Course.find_by(code: params[:course_name])
+        @courses = Course.where('lower(name) LIKE ?', "%#{@search.downcase}%")
+        render 'show'
+    end
+    ```   
+     
+* Course Enroll
+    ``` ruby
+    def enroll
+        if Enrollment.where(user_id: current_user.id, course_id: params[:course_id]).size >= 1
+          flash[:danger] = 'This course is already enrolled'
+        else
+          Enrollment.create(user_id: current_user.id, course_id: params[:course_id])
+          flash[:success] = 'Course enroll success!'
+        end
+        redirect_to search_path
+    end
+    ```
+   
+* Enroll Button
+    ``` html
+    <%= link_to 'Enroll', "/enroll/#{course.id}", class: 'btn btn-primary', method: :post %>
+    ```

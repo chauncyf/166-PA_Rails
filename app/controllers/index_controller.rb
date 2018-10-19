@@ -20,7 +20,9 @@ class IndexController < ApplicationController
 
   def result
     @enrollments = Enrollment.all
-    @course = Course.find_by(code: params[:course_code])
+    @search = params[:course_name]
+    # @course = Course.find_by(code: params[:course_name])
+    @courses = Course.where('lower(name) LIKE ?', "%#{@search.downcase}%")
     render 'show'
   end
 
@@ -31,12 +33,6 @@ class IndexController < ApplicationController
     # @course = Course.find_by(code: "ENVS 97A")
   end
 
-  # def enroll
-  #   @enrollments = Enrollment.create(user_id: current_user.id, course_id: params[:course_id])
-  #   # puts "!!! #{current_user.id} #{current_user.name}, #{current_user.email}"
-  #   # puts :course_id
-  #   # puts params[:course_id]
-  # end
 
   # private
   #   def enroll_params
