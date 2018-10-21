@@ -15,14 +15,26 @@ class IndexController < ApplicationController
 
   def search
     @courses = Course.all
+    @subjects = Subject.all
 
   end
 
   def result
     @enrollments = Enrollment.all
-    @search = params[:course_name]
+    @course_query = params[:course_name]
+    @subject = params[:subject][:subject_id]
     # @course = Course.find_by(code: params[:course_name])
-    @courses = Course.where('lower(name) LIKE ?', "%#{@search.downcase}%")
+    if @subject.size.equal?(0)
+      @courses = Course.where('lower(name) LIKE ?', "%#{@course_query.downcase}%")
+    else
+      # @courses = Course.where('lower(name) LIKE ?', "%#{@search.downcase}%").subjects.all
+      @subject_name = Subject.find_by(id: @subject).name
+      @courses = Course.joins(:subjects).where('lower(courses.name) LIKE ? AND subjects.id = ?', "%#{@course_query.downcase}%", @subject)
+
+      puts "!!!!!!!#{@courses.size}"
+    end
+    @result_sum = @courses.size
+
     render 'show'
   end
 

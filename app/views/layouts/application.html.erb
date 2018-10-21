@@ -27,7 +27,7 @@
         <%= yield %>
 
         <%= render 'layouts/footer' %>
-        <%#= debug(params) if Rails.env.development? %>
+        <%= debug(params) if Rails.env.development? %>
       </div>
     <%# end %>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

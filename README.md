@@ -120,3 +120,9 @@ https://github.com/chauncyf/PA-Rails-2
     ``` html
     <%= link_to 'Enroll', "/enroll/#{course.id}", class: 'btn btn-primary', method: :post %>
     ```
+ 
+* A fresh start for db  
+    Delete the entire contents on your db and recreate the schema from your schema.rb file, without having to apply all migrations one by one.
+    ```
+    $ rails db:schema:load
+    ``` 
