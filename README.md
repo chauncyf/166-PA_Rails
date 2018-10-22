@@ -81,6 +81,13 @@ https://github.com/chauncyf/PA-Rails-2
   ```
   
 ### PA Rails 2
+
+* A fresh start for db  
+    Delete the entire contents on your db and recreate the schema from your schema.rb file, without having to apply all migrations one by one.
+    ```
+    $ rails db:schema:load
+    ``` 
+    
 * Require Login
     ``` ruby
     before_action :require_login
@@ -92,17 +99,43 @@ https://github.com/chauncyf/PA-Rails-2
         end
     ```
 
-* Course Search
+* Form_tag & Collection_select 
+    ``` erb
+    <%= form_tag(search_result_path, method: "get") do %>
+      <%= label_tag(:subject_search, "Subject:") %>
+      <%= collection_select(:subject, :subject_id, Subject.all, :id, :name, prompt: "Select Subject") %>
+    
+      <%= label_tag(:course_name_search, "Name:") %>
+      <%= text_field_tag(:course_name) %>
+    
+      <%= submit_tag("Search", class: 'btn btn-primary') %>
+    <% end %>
+    ```
+
+* ActiveRecord Course Search
     ``` ruby
-    def result
+     def result
         @enrollments = Enrollment.all
-        @search = params[:course_name]
-        # @course = Course.find_by(code: params[:course_name])
-        @courses = Course.where('lower(name) LIKE ?', "%#{@search.downcase}%")
+        @course_query = params[:course_name]
+        @subject = params[:subject][:subject_id]
+        
+        if @subject.size.equal?(0)
+          @courses = Course.where('lower(name) LIKE ?', "%#{@course_query.downcase}%")
+        else
+          @subject_name = Subject.find_by(id: @subject).name
+          @courses = Course.joins(:subjects).where('lower(courses.name) LIKE ? AND subjects.id = ?', "%#{@course_query.downcase}%", @subject)
+        end
+        @result_sum = @courses.size
+    
         render 'show'
-    end
+      end
     ```   
-     
+   
+* Enroll Button
+    ``` erb
+    <%= link_to 'Enroll', "/enroll/#{course.id}", class: 'btn btn-primary', method: :post %>
+    ```
+ 
 * Course Enroll
     ``` ruby
     def enroll
@@ -115,14 +148,3 @@ https://github.com/chauncyf/PA-Rails-2
         redirect_to search_path
     end
     ```
-   
-* Enroll Button
-    ``` html
-    <%= link_to 'Enroll', "/enroll/#{course.id}", class: 'btn btn-primary', method: :post %>
-    ```
- 
-* A fresh start for db  
-    Delete the entire contents on your db and recreate the schema from your schema.rb file, without having to apply all migrations one by one.
-    ```
-    $ rails db:schema:load
-    ``` 
