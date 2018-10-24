@@ -2,7 +2,7 @@
 Hi, this is a course assignment repository for COSI 166b.
 
 ## GitHub
-https://github.com/chauncyf/PA-Rails-2
+https://github.com/chauncyf/PA-Rails-3
 
 ## Heroku
  https://chenfeng-pa-rails.herokuapp.com/
@@ -148,3 +148,7 @@ https://github.com/chauncyf/PA-Rails-2
         redirect_to search_path
     end
     ```
+    
+### PA Rails 3
+
+* [How to render partial on the same page after clicking on link_to with AJAX](https://stackoverflow.com/questions/35899433/how-to-render-partial-on-the-same-page-after-clicking-on-link-to-with-ajax)

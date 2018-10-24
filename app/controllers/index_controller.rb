@@ -37,6 +37,11 @@ class IndexController < ApplicationController
 
   def show
     @course = Course.first
+
+    respond_to do |format|
+      format.js { render layout: false } # Add this line to you respond_to block
+    end
+
     # @course = Course.find_by(code: params[:course_code])
     # puts "$$$$$$#{params[:course_code]}"
     # @course = Course.find_by(code: "ENVS 97A")

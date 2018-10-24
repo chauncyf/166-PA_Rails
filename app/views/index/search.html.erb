@@ -8,14 +8,19 @@
 
 <!--<%# select("subject", "subject_id", Subject.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>>
 
-<%= form_tag(search_result_path, method: "get") do %>
-  <%= label_tag(:subject_search, "Subject:") %>
-  <%= collection_select(:subject, :subject_id, Subject.all, :id, :name, prompt: "Select Subject") %>
+<%= form_tag(search_result_path, remote: true, method: :get) do %>
+  <%= label_tag(:subject_search, 'Subject:') %>
+  <%= collection_select(:subject, :subject_id, Subject.all, :id, :name, prompt: 'Select Subject') %>
 
-  <%= label_tag(:course_name_search, "Name:") %>
-  <%= text_field_tag(:course_name) %>
+  <%= label_tag(:course_name_search, 'Name:') %>
+  <%= text_field_tag :course_name, nil, placeholder: 'Course Name' %>
 
-  <%= submit_tag("Search", class: 'btn btn-primary') %>
+  <%= submit_tag('Search', class: 'btn btn-primary') %>
 <% end %>
 
-<%= render 'index/index' %>
+<%# if !:course_name %>
+  <%#= render 'index/index' %>
+<%# else %>
+<hr>
+<div id="search_result"> </div>
+<%# end %>

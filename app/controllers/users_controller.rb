@@ -33,7 +33,8 @@ class UsersController < ApplicationController
       Enrollment.create(user_id: current_user.id, course_id: params[:course_id])
       flash[:success] = 'Course enroll success!'
     end
-    redirect_to search_path
+    # redirect_to search_path
+    redirect_to enrolled_course_path
   end
 
   def drop
