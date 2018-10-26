@@ -7,16 +7,29 @@
 
 
 <!--<%# select("subject", "subject_id", Subject.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>>
-
 <%= form_tag(search_result_path, remote: true, method: :get) do %>
-  <%= label_tag(:subject_search, 'Subject:') %>
-  <%= collection_select(:subject, :subject_id, Subject.all, :id, :name, prompt: 'Select Subject') %>
+  <div class="row">
 
-  <%= label_tag(:course_name_search, 'Name:') %>
-  <%= text_field_tag :course_name, nil, placeholder: 'Course Name' %>
+    <div class="form-group col-md-4">
+      <%= label_tag(:subject_search, 'Subject:') %>
+      <%= collection_select(:subject, :subject_id, Subject.all,:id, :name, {prompt: 'Select Subject'}, class: 'form-control form-control-lg') %>
+    </div>
 
-  <%= submit_tag('Search', class: 'btn btn-primary') %>
+    <div class="form-group col-md-6">
+      <%= label_tag(:course_name_search, 'Name:') %>
+      <%= text_field_tag :course_name, nil, class: "form-control", placeholder: 'Course Name' %>
+    </div>
+
+    <div class="form-group col-md-2">
+      <%= label_tag(:course_name_search, 'Go:') %>
+
+      <%= submit_tag('Search', class: 'btn btn-primary') %>
+
+    </div>
+  </div>
 <% end %>
+
+
 
 <%# if !:course_name %>
   <%#= render 'index/index' %>
