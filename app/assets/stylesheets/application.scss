@@ -107,9 +107,13 @@ p {
     height: 50px;
     overflow: visible;
 }
-.dropdown-menu show{
 
-    position: fixed;
+//.dropdown-menu li:hover .sub-menu {
+//  visibility: visible;
+//}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 
