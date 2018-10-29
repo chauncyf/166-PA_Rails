@@ -151,4 +151,7 @@ https://github.com/chauncyf/PA-Rails-3
     
 ### PA Rails 3
 
+#### References
 * [How to render partial on the same page after clicking on link_to with AJAX](https://stackoverflow.com/questions/35899433/how-to-render-partial-on-the-same-page-after-clicking-on-link-to-with-ajax)
+* [Rails Trying to submit a form onchange of dropdown](https://stackoverflow.com/questions/6959481/rails-trying-to-submit-a-form-onchange-of-dropdown?answertab=active#tab-top)
+* [Rails text_field_tag onchange: not working](https://stackoverflow.com/questions/22971453/rails-text-field-tag-onchange-not-working)

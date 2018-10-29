@@ -1,39 +1,25 @@
 <% provide(:title, 'Search') %>
 <h1>Course Search</h1>
 
-<%#= f.collection_select :provider_id, @subjects, :id, :name, include_blank: true %>
-
-<!--<td><%#= link_to 'Enroll', "/enroll/#{course.id}", class: 'btn btn-primary', method: :post %></td>-->
-
-
-<!--<%# select("subject", "subject_id", Subject.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>>
 <%= form_tag(search_result_path, remote: true, method: :get) do %>
   <div class="row">
 
-    <div class="form-group col-md-4">
+    <div class="form-group col-sm-4">
       <%= label_tag(:subject_search, 'Subject:') %>
-      <%= collection_select(:subject, :subject_id, Subject.all,:id, :name, {prompt: 'Select Subject'}, class: 'form-control form-control-lg') %>
+      <%= collection_select(:subject, :subject_id, Subject.all,:id, :name,{prompt: 'Select Subject'}, onchange: 'Rails.fire(this.form, "submit")', class: 'form-control form-control-lg') %>
     </div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-8">
       <%= label_tag(:course_name_search, 'Name:') %>
-      <%= text_field_tag :course_name, nil, class: "form-control", placeholder: 'Course Name' %>
+      <%= text_field_tag :course_name, nil, class: 'form-control', placeholder: 'Course Name', onkeyup: 'Rails.fire(this.form, "submit")' %>
     </div>
 
-    <div class="form-group col-md-2">
-      <%= label_tag(:course_name_search, 'Go:') %>
-
-      <%= submit_tag('Search', class: 'btn btn-primary') %>
-
-    </div>
+<!--    <div class="form-group col-md-2">-->
+      <%#= label_tag(:course_name_search, 'Go!') %>
+      <%#= submit_tag('Search', class: 'btn btn-primary') %>
+<!--    </div>-->
   </div>
 <% end %>
 
-
-
-<%# if !:course_name %>
-  <%#= render 'index/index' %>
-<%# else %>
 <hr>
 <div id="search_result"> </div>
-<%# end %>

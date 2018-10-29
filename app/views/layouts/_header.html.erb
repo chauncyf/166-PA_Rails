@@ -3,14 +3,13 @@
     <%= link_to "course catalog", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Course",   courses_path %></li>
+        <li class="button"><%= link_to "Course",   courses_path %></li>
         <li><%= link_to "Instructor",   instructors_path %></li>
         <li><%= link_to "Subject", subjects_path %></li>
         <li><%= link_to "Search", search_path %></li>
-
         <% if logged_in? %>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account</a>
+            <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
             <ul class="dropdown-menu">
               <li><%= link_to "Profile", current_user %></li>
               <li><%= link_to "Enrolled", enrolled_course_path %></li>
@@ -20,6 +19,7 @@
               </li>
             </ul>
           </li>
+
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
@@ -28,53 +28,3 @@
     </nav>
   </div>
 </header>
-
-<!--<header>-->
-<!--  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark active">-->
-<!--    <a class="navbar-brand" href=<%#= root_path %>>Course Catalog</a>-->
-<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--      <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
-
-<!--    <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">-->
-<!--      <ul class="navbar-nav mr-auto">-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link" href=<%#= courses_path %>>Course</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link" href=<%#= instructors_path %>>Instructor</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link" href=<%#= subject_path %>>Subject</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link" href=<%#= search_path %>>Search</a>-->
-<!--        </li>-->
-        <%# if logged_in? %>
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--              Account-->
-<!--            </a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--              <a class="dropdown-item" href=<%#= current_user %>>Profile</a>-->
-<!--              <a class="dropdown-item" href=<%#= enrolled_course_path %>>Enrolled</a>-->
-<!--              <div class="dropdown-divider"></div>-->
-<!--              <a class="dropdown-item" href=<%#= logout_path %>>Log out</a>-->
-<!--            </div>-->
-<!--          </li>-->
-        <%# else %>
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href=<%#= login_path %>>Log in</a>-->
-<!--          </li>-->
-        <%# end %>
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link disabled" href="#">Disabled</a>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--      <form class="form-inline my-2 my-lg-0">-->
-<!--        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-<!--      </form>-->
-<!--    </div>-->
-<!--  </nav>-->
-<!--</header>-->
