@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4d36c72a-4582-4b58-9c5e-c3c8cbadeb60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index/search.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index/search.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -181,7 +176,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="erb" value="1041" />
+          <entry key="erb" value="1043" />
           <entry key="md" value="36" />
           <entry key="rb" value="132" />
           <entry key="scss" value="32" />
@@ -190,7 +185,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="36" />
-          <entry key="RHTML" value="1041" />
+          <entry key="RHTML" value="1043" />
           <entry key="Ruby" value="132" />
           <entry key="SCSS" value="32" />
         </counts>
@@ -198,7 +193,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="1" />
-          <entry key="erb" value="34" />
+          <entry key="erb" value="35" />
           <entry key="js" value="1" />
           <entry key="md" value="2" />
           <entry key="rb" value="23" />
@@ -209,7 +204,7 @@
         <counts>
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="2" />
-          <entry key="RHTML" value="34" />
+          <entry key="RHTML" value="35" />
           <entry key="Ruby" value="24" />
           <entry key="SCSS" value="4" />
         </counts>
@@ -221,7 +216,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/index/search.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
@@ -230,14 +225,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="217">
-                <caret line="145" column="30" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+              <first_editor relative-caret-position="393">
+                <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -336,7 +340,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="31" />
+    <option name="x" value="-81" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="877" />
@@ -611,12 +615,12 @@
       <workItem from="1540518969272" duration="2000" />
       <workItem from="1540570080926" duration="8512000" />
       <workItem from="1540585814134" duration="3365000" />
-      <workItem from="1540783270736" duration="2406000" />
+      <workItem from="1540783270736" duration="2700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137441000" />
+    <option name="totallyTimeSpent" value="137735000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -628,10 +632,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49855492" visible="true" weight="0.19313304" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49855492" visible="true" weight="0.19313304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5014451" side_tool="true" weight="0.13471779" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -644,7 +647,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32908162" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946752" visible="true" weight="0.2640306" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946752" visible="true" weight="0.36607143" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005325" side_tool="true" weight="0.34796575" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.328877" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -955,6 +958,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index/search.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -972,17 +982,10 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="217">
-            <caret line="145" column="30" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+          <first_editor relative-caret-position="393">
+            <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index/search.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
