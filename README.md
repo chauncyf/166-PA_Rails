@@ -5,7 +5,7 @@ Hi, this is a course assignment repository for COSI 166b.
 https://github.com/chauncyf/PA-Rails-3
 
 ## Heroku
- https://chenfeng-pa-rails.herokuapp.com/
+ https://coursecat.herokuapp.com/
 
 ## Things you may want to cover
 
