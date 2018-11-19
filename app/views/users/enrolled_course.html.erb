@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Enrolled Courses</h1>
+<h1 class="text-center my-5">
+  <%= gravatar_for @user%>
+  <%= @user.name %>
+</h1>
 
-<table class="table">
+<h3 class="my-3">Enrolled Courses:</h3>
+
+<table class="table table-striped">
   <thead>
   <tr>
     <th>Code</th>

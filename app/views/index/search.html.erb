@@ -1,25 +1,20 @@
 <% provide(:title, 'Search') %>
-<h1>Course Search</h1>
+<h1 class="text-center my-5">Course Search</h1>
 
 <%= form_tag(search_result_path, remote: true, method: :get) do %>
-  <div class="row">
+  <div class="row mb-5">
 
     <div class="form-group col-sm-4">
       <%= label_tag(:subject_search, 'Subject:') %>
-      <%= collection_select(:subject, :subject_id, Subject.all,:id, :name,{prompt: 'Select Subject'}, onchange: 'Rails.fire(this.form, "submit")', class: 'form-control form-control-lg') %>
+      <%= collection_select(:subject, :subject_id, Subject.all,:id, :name,{prompt: 'Select Subject'}, onchange: 'Rails.fire(this.form, "submit")', class: 'form-control') %>
     </div>
 
     <div class="form-group col-md-8">
       <%= label_tag(:course_name_search, 'Name:') %>
-      <%= text_field_tag :course_name, nil, class: 'form-control', placeholder: 'Course Name', onkeyup: 'Rails.fire(this.form, "submit")' %>
+      <%= text_field_tag :course_name, nil, onkeyup: 'Rails.fire(this.form, "submit")', placeholder: 'Course Name', class: 'form-control' %>
     </div>
 
-<!--    <div class="form-group col-md-2">-->
-      <%#= label_tag(:course_name_search, 'Go!') %>
-      <%#= submit_tag('Search', class: 'btn btn-primary') %>
-<!--    </div>-->
   </div>
 <% end %>
 
-<hr>
 <div id="search_result"> </div>

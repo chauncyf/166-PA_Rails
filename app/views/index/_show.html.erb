@@ -1,10 +1,6 @@
-<!--<h1>Results</h1>-->
+<h4>"<%= @result_sum %>" Results about Course: "<%= @course_query %>" and Subject: "<%= @subject_name %>":</h4>
 
-<h3>"<%= @result_sum %>" Results about Course: "<%= @course_query %>" and Subject: "<%= @subject_name %>":</h3>
-<br>
-
-
-<table class="table">
+<table class="table table-striped">
   <thead>
   <tr>
     <th>Code</th>
@@ -25,8 +21,3 @@
   <% end %>
   </tbody>
 </table>
-
-<!--<hr>-->
-<%#= link_to 'Back', 'javascript:history.back()', class: 'btn btn-primary' %>
-
-
