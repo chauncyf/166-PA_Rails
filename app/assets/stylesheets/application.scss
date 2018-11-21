@@ -13,10 +13,6 @@
  *= require_self
  */
 
-.body-container {
-  overflow: no-display;
-
-}
 
 .navbar {
   position: fixed;
@@ -35,7 +31,11 @@
   }
 }
 
-
+.card{
+  width: 32rem;
+  border: none !important;
+  border-radius: 1rem !important;
+}
 
 .gravatar {
   max-height: 45px;

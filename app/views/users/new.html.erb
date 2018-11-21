@@ -1,23 +1,27 @@
 <% provide(:title, 'Sign up') %>
-<h1 class="text-center my-5">Sign up</h1>
 
-  <div class="col-md-6 m-5 mx-auto">
+<div class="card shadow-lg mx-auto m-5 p-2">
+  <div class="card-body">
+    <h1 class="card-title text-center mt-3 mb-5">Sign up</h1>
 
-    <%= form_for(@user, url: signup_path) do |f| %>
-      <%= render 'shared/error_messages' %>
+    <div class="col mx-auto">
+      <%= form_for(@user, url: signup_path) do |f| %>
+        <%= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control mb-3' %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control mb-3' %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control mb-3' %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control mb-3' %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control mb-3' %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control mb-3' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control mb-4' %>
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'form-control mb-4' %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% end %>
+    </div>
   </div>
+</div>
