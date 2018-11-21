@@ -15,12 +15,22 @@
 
 
 .body-container {
-  width: 90%;
+  width: 80%;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px){
   .body-container {
-    width: 80%;
+    width: 90%;
+  }
+
+  .navbar {
+    .navbar-brand {
+      margin-left: 5% !important;
+    }
+
+    #navbarSupportedContent {
+      margin-right: 5% !important;
+    }
   }
 }
 
