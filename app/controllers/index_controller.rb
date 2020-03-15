@@ -20,7 +20,6 @@ class IndexController < ApplicationController
   end
 
   def result
-    @enrollments = Enrollment.all
     @course_query = params[:course_name]
     @subject = params[:subject][:subject_id]
 
@@ -28,7 +27,7 @@ class IndexController < ApplicationController
       @courses = Course.where('lower(name) LIKE ?', "%#{@course_query.downcase}%")
     else
       @subject_name = Subject.find_by(id: @subject).name
-      @courses = Course.joins(:subjects).where('lower(courses.name) LIKE ? AND subjects.id = ?', "%#{@course_query.downcase}%", @subject)
+      @courses = Subject.find(@subject).courses.where('lower(name) LIKE ?', "%#{@course_query.downcase}%")
     end
     @result_sum = @courses.size
 
