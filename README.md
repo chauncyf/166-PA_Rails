@@ -1,15 +1,10 @@
 # PA Rails
-Hi, this is a course assignment repository for COSI 166b.
+Hi, this is a course assignment repository for [COSI 166b](http://cosi166b.s3-website-us-west-2.amazonaws.com/). This assignment introduces the MVC architecture of Rails and design a web app in which users can select, search and enroll university classes.
 
-## GitHub
-https://github.com/chauncyf/PA-Rails-3
-
-## Heroku
+## Deploylment on Heroku
  https://coursecat.herokuapp.com/
 
 ## Things you may want to cover
-
-* Who am I - [Chenfeng Fan](https://github.com/chauncyf),  <fanc@brandeis.edu>
 
 * Assignment Page - [PA Rails 1](http://cosi166b.s3-website-us-west-2.amazonaws.com/content/topics/pa/pa_rails_1.md/), [PA Rails 2](http://cosi166b.s3-website-us-west-2.amazonaws.com/content/topics/pa/pa_rails_2.md/), [PA Rails 3](http://cosi166b.s3-website-us-west-2.amazonaws.com/content/topics/pa/pa_rails_3.md/)
 
